@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplex Solver — Résolution de Programmes Linéaires</title>
-    <meta name="description" content="Outil interactif et animé de résolution de programmes linéaires par la méthode du Simplexe. Visualisez chaque itération en temps réel.">
+    <title>Simplex Solver — Linear Program Solver</title>
+    <meta name="description" content="Interactive animated tool for solving linear programs with the Simplex method. Watch every iteration in real time.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -43,13 +43,13 @@
             </div>
             <div class="header-right">
                 <nav class="nav-links">
-                    <a href="#input-section" class="nav-link active" data-section="input" data-i18n="navProblem">Problème</a>
-                    <a href="#solve-section" class="nav-link" data-section="solve" data-i18n="navSolve">Résolution</a>
-                    <a href="#results-section" class="nav-link" data-section="results" data-i18n="navResults">Résultats</a>
+                    <a href="#input-section" class="nav-link active" data-section="input" data-i18n="navProblem">Problem</a>
+                    <a href="#solve-section" class="nav-link" data-section="solve" data-i18n="navSolve">Solving</a>
+                    <a href="#results-section" class="nav-link" data-section="results" data-i18n="navResults">Results</a>
                 </nav>
                 <div class="lang-switch" role="group" aria-label="Language">
-                    <button type="button" class="lang-btn active" data-lang="fr" id="lang-fr">FR</button>
-                    <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
+                    <button type="button" class="lang-btn active" data-lang="en" id="lang-en">EN</button>
+                    <button type="button" class="lang-btn" data-lang="fr" id="lang-fr">FR</button>
                 </div>
             </div>
         </div>
@@ -62,18 +62,18 @@
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
-                    <span data-i18n="heroBadge">Méthode du Simplexe</span>
+                    <span data-i18n="heroBadge">Simplex Method</span>
                 </div>
                 <h1 class="hero-title" data-i18n-html="heroTitle">
-                    Résolvez vos <span class="gradient-text">programmes linéaires</span>
-                    <br>en temps réel
+                    Solve your <span class="gradient-text">linear programs</span>
+                    <br>in real time
                 </h1>
                 <p class="hero-subtitle" data-i18n-html="heroSub">
-                    Interface interactive avec visualisation étape par étape de l'algorithme du Simplexe.
-                    <br>Saisissez votre problème et regardez la magie opérer.
+                    Interactive interface with step-by-step visualization of the Simplex algorithm.
+                    <br>Enter your problem and watch it unfold.
                 </p>
                 <button class="btn-hero" id="btn-start" onclick="scrollToInput()">
-                    <span data-i18n="heroCta">Commencer</span>
+                    <span data-i18n="heroCta">Get started</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -99,8 +99,8 @@
         <section class="section" id="input-section">
             <div class="section-header">
                 <div class="section-number">01</div>
-                <h2 class="section-title" data-i18n="inputTitle">Définir le Problème</h2>
-                <p class="section-desc" data-i18n="inputDesc">Configurez les dimensions du problème puis saisissez les coefficients</p>
+                <h2 class="section-title" data-i18n="inputTitle">Define the Problem</h2>
+                <p class="section-desc" data-i18n="inputDesc">Set the problem size, then enter the coefficients</p>
             </div>
 
             <div class="input-grid">
@@ -113,19 +113,19 @@
                                 <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
                             </svg>
                         </div>
-                        <h3 data-i18n="config">Configuration</h3>
+                        <h3 data-i18n="config">Setup</h3>
                     </div>
                     <div class="config-form">
                         <div class="form-group">
-                            <label data-i18n="optType">Type d'optimisation</label>
+                            <label data-i18n="optType">Optimization type</label>
                             <div class="toggle-group" id="opt-toggle">
                                 <button class="toggle-btn active" data-value="max" id="btn-max">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-                                    <span data-i18n="maximize">Maximiser</span>
+                                    <span data-i18n="maximize">Maximize</span>
                                 </button>
                                 <button class="toggle-btn" data-value="min" id="btn-min">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-                                    <span data-i18n="minimize">Minimiser</span>
+                                    <span data-i18n="minimize">Minimize</span>
                                 </button>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="con-count" data-i18n="constraints">Contraintes (m)</label>
+                                <label for="con-count" data-i18n="constraints">Constraints (m)</label>
                                 <div class="stepper">
                                     <button class="stepper-btn" onclick="adjustCon(-1)" id="con-minus">−</button>
                                     <input type="number" id="con-count" value="2" min="1" max="10" readonly>
@@ -149,7 +149,7 @@
                         </div>
                         <button class="btn-primary" id="btn-generate" onclick="generateInputs()">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-                            <span data-i18n="generate">Générer le formulaire</span>
+                            <span data-i18n="generate">Generate form</span>
                         </button>
                     </div>
                 </div>
@@ -180,26 +180,26 @@
                             <polyline points="10 9 9 9 8 9"/>
                         </svg>
                     </div>
-                    <h3 data-i18n="preview">Aperçu du Problème</h3>
+                    <h3 data-i18n="preview">Problem Preview</h3>
                 </div>
                 <div class="problem-preview" id="problem-preview"></div>
                 <div class="preview-actions">
                     <div class="example-dropdown">
                         <button class="btn-secondary" id="btn-example-trigger">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span data-i18n="loadDemo">Charger une démo</span>
+                            <span data-i18n="loadDemo">Load a demo</span>
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;"><path d="M6 9l6 6 6-6"/></svg>
                         </button>
                         <div class="dropdown-content">
-                            <a href="javascript:void(0)" onclick="loadExample(1)" data-i18n="demo1">1. Cas Standard (Unique)</a>
-                            <a href="javascript:void(0)" onclick="loadExample(2)" data-i18n="demo2">2. Cas Non Borné</a>
-                            <a href="javascript:void(0)" onclick="loadExample(3)" data-i18n="demo3">3. Solutions Multiples</a>
-                            <a href="javascript:void(0)" onclick="loadExample(4)" data-i18n="demo4">4. Dégénérescence</a>
+                            <a href="javascript:void(0)" onclick="loadExample(1)" data-i18n="demo1">1. Standard case (unique)</a>
+                            <a href="javascript:void(0)" onclick="loadExample(2)" data-i18n="demo2">2. Unbounded case</a>
+                            <a href="javascript:void(0)" onclick="loadExample(3)" data-i18n="demo3">3. Multiple solutions</a>
+                            <a href="javascript:void(0)" onclick="loadExample(4)" data-i18n="demo4">4. Degeneracy</a>
                         </div>
                     </div>
                     <button class="btn-primary glow-btn" id="btn-solve" onclick="solve()">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                        <span data-i18n="solve">Résoudre</span>
+                        <span data-i18n="solve">Solve</span>
                     </button>
                 </div>
 
@@ -210,8 +210,8 @@
         <section class="section hidden" id="solve-section">
             <div class="section-header">
                 <div class="section-number">02</div>
-                <h2 class="section-title" data-i18n="solveTitle">Résolution Pas à Pas</h2>
-                <p class="section-desc" data-i18n="solveDesc">Suivez chaque itération de l'algorithme du Simplexe</p>
+                <h2 class="section-title" data-i18n="solveTitle">Step-by-step Solving</h2>
+                <p class="section-desc" data-i18n="solveDesc">Follow each iteration of the Simplex algorithm</p>
             </div>
 
             <!-- Progress Bar -->
@@ -219,7 +219,7 @@
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress-fill"></div>
                 </div>
-                <div class="progress-label" id="progress-label" data-i18n="standardizing">Standardisation...</div>
+                <div class="progress-label" id="progress-label" data-i18n="standardizing">Standardizing...</div>
             </div>
 
             <!-- Iterations -->
@@ -230,8 +230,8 @@
         <section class="section hidden" id="results-section">
             <div class="section-header">
                 <div class="section-number">03</div>
-                <h2 class="section-title" data-i18n="resultsTitle">Résultats</h2>
-                <p class="section-desc" data-i18n="resultsDesc">Solution optimale de votre programme linéaire</p>
+                <h2 class="section-title" data-i18n="resultsTitle">Results</h2>
+                <p class="section-desc" data-i18n="resultsDesc">Optimal solution of your linear program</p>
             </div>
 
             <div class="results-grid" id="results-grid"></div>
@@ -240,7 +240,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p data-i18n-html="footer">Simplex<span class="logo-accent">Solver</span> — Algorithme du Simplexe interactif</p>
+        <p data-i18n-html="footer">Simplex<span class="logo-accent">Solver</span> — Interactive Simplex algorithm</p>
     </footer>
 
     <!-- Toast Notification -->

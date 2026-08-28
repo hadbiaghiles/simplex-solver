@@ -140,11 +140,11 @@ const I18N = {
   }
 };
 
-let currentLang = localStorage.getItem("simplex-lang") || "fr";
+let currentLang = localStorage.getItem("simplex-lang") || "en";
 
 function t(key, vars) {
-  const dict = I18N[currentLang] || I18N.fr;
-  let s = dict[key] || I18N.fr[key] || key;
+  const dict = I18N[currentLang] || I18N.en;
+  let s = dict[key] || I18N.en[key] || I18N.fr[key] || key;
   if (vars) {
     Object.keys(vars).forEach(k => {
       s = s.replaceAll("{" + k + "}", vars[k]);
@@ -158,7 +158,7 @@ function applyLang(lang) {
   localStorage.setItem("simplex-lang", lang);
   document.documentElement.lang = lang;
 
-  const dict = I18N[lang] || I18N.fr;
+  const dict = I18N[lang] || I18N.en;
   document.title = dict.docTitle;
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.setAttribute("content", dict.docDesc);

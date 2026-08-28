@@ -1,34 +1,34 @@
 # Simplex Solver
 
-**[Ouvrir l’app →](https://hadbiaghiles.github.io/simplex-solver/)**
+**[Open the app →](https://hadbiaghiles.github.io/simplex-solver/)**
 
-Solveur interactif de programmes linéaires par la méthode du Simplexe. Tu saisis l’objectif et les contraintes, tu lances la résolution, et chaque itération s’affiche en tableau (pivots, dégénérescence, règle de Bland, solution finale).
+Interactive solver for linear programs using the Simplex method. Enter an objective and constraints, run the solver, and watch every iteration as a tableau: pivots, degeneracy, Bland's rule, and the final solution.
 
-Interface **FR / EN** (bouton en haut à droite).
+The UI starts in **English**. Switch to French anytime from the EN / FR toggle in the header.
 
 ## Live demo
 
 https://hadbiaghiles.github.io/simplex-solver/
 
-## Fonctionnalités
+## Features
 
-- Maximisation et minimisation
-- Tableaux Simplexe animés, étape par étape
-- Cas gérés : solution unique, solutions multiples, problème non borné, dégénérescence
-- Demos prêtes à charger (standard, non borné, solutions multiples, dégénérescence)
-- Switch français / anglais
+- Maximize and minimize
+- Animated Simplex tableaux, step by step
+- Unique solution, multiple solutions, unbounded problems, and degeneracy
+- Built-in demos (standard, unbounded, multiple solutions, degeneracy)
+- English / French interface
 
-## Lancer en local
+## Run locally
 
-Aucun build. Ouvre `index.html` dans un navigateur.
+No build step. Open `index.html` in a browser.
 
-## Fichiers
+## Files
 
-| Fichier | Rôle |
+| File | Role |
 | --- | --- |
-| `index.html` | Interface |
-| `app.js` | Logique UI, animations |
-| `simplex.js` | Algorithme du Simplexe |
-| `i18n.js` | Traductions FR / EN |
+| `index.html` | UI |
+| `app.js` | Interface logic and animations |
+| `simplex.js` | Simplex algorithm |
+| `i18n.js` | EN / FR translations |
 | `style.css` | Styles |
-| `Simplexe_Regle.py` | Version Python de référence |
+| `Simplexe_Regle.py` | Python reference implementation |
