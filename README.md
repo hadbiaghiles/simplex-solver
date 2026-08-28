@@ -1,25 +1,34 @@
 # Simplex Solver
 
-Interactive web app that solves linear programs with the Simplex method, step by step.
+**[Ouvrir l’app →](https://hadbiaghiles.github.io/simplex-solver/)**
 
-Switch the UI between **French** and **English** from the header. Enter an objective and constraints, or load a demo, then watch each pivot, degeneracy check, and the final solution.
+Solveur interactif de programmes linéaires par la méthode du Simplexe. Tu saisis l’objectif et les contraintes, tu lances la résolution, et chaque itération s’affiche en tableau (pivots, dégénérescence, règle de Bland, solution finale).
 
-## Run locally
+Interface **FR / EN** (bouton en haut à droite).
 
-Open `index.html` in a browser. No build step.
+## Live demo
 
-## Features
+https://hadbiaghiles.github.io/simplex-solver/
 
-- Max / min linear programs
-- Animated tableau iterations
-- Unique, multiple, unbounded, and degenerate cases
-- FR / EN interface
+## Fonctionnalités
 
-## Files
+- Maximisation et minimisation
+- Tableaux Simplexe animés, étape par étape
+- Cas gérés : solution unique, solutions multiples, problème non borné, dégénérescence
+- Demos prêtes à charger (standard, non borné, solutions multiples, dégénérescence)
+- Switch français / anglais
 
-- `index.html` — UI
-- `app.js` — interface logic
-- `simplex.js` — Simplex algorithm
-- `i18n.js` — translations
-- `style.css` — styles
-- `Simplexe_Regle.py` — Python reference of the algorithm
+## Lancer en local
+
+Aucun build. Ouvre `index.html` dans un navigateur.
+
+## Fichiers
+
+| Fichier | Rôle |
+| --- | --- |
+| `index.html` | Interface |
+| `app.js` | Logique UI, animations |
+| `simplex.js` | Algorithme du Simplexe |
+| `i18n.js` | Traductions FR / EN |
+| `style.css` | Styles |
+| `Simplexe_Regle.py` | Version Python de référence |
