@@ -10,6 +10,8 @@ Interactive solver for linear programs using the Simplex method. Enter an object
 
 The UI starts in **English**. Switch to French anytime from the EN / FR toggle in the header.
 
+Author: **Hadbi Aghiles**
+
 ## Live demo
 
 https://hadbiaghiles.github.io/simplex-solver/
